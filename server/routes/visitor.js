@@ -75,7 +75,7 @@ router.route("/addInfo").post((req, res) => {
 
                     // send mail to with defined transport object
                     let info = transporter.sendMail({
-                        from: '"Entry Management"<opqrs4203@gmail.com>',                                         // sender address
+                        from: '"Entry Management"<EMS@gmail.com>',                                         // sender address
                         to: host.email,                                                                          // list of receivers
                         subject: name + " checked in!!",                                                         // Subject line
                         html: "<ul> <li>Name: "
@@ -94,7 +94,7 @@ router.route("/addInfo").post((req, res) => {
 
 
                     //Send Mobile SMS to Hodt through bulkmessageservice API
-                    request('http://sms.bulksmsserviceproviders.com/api/send_http.php?authkey=29ade2fa4053fa2a60eb834706bf0203&mobiles=' + host.phone + '&message=' + 'Name:' + name + '%0D%0A' + 'Phone:' + phone + '%0D%0A' + 'Email:' + email + '%0D%0A' + 'checkInTime:' + moment(checkInTime).format('MMMM Do YYYY, h:mm:ss a') + '%0D%0A' + 'Address:' + address + '&sender=BulkIN&route=B', (error, response, body) => {
+                    request('http://sms.bulksmsserviceproviders.com/api/send_http.php?authkey=3a4ae3b1438a3e09ef56b4578c833b55&mobiles=' + host.phone + '&message=' + 'Name:' + name + '%0D%0A' + 'Phone:' + phone + '%0D%0A' + '%0D%0A' + 'checkInTime:' + moment(checkInTime).format('MMMM Do YYYY, h:mm:ss a') + '%0D%0A' + 'Address:' + address + '&sender=BulkIN&route=B', (error, response, body) => {
                         if (!error && response.statusCode == 200) {
 
                             console.log(body);
@@ -142,10 +142,11 @@ router.route('/:uniqid').post((req, res) => {
 
                     //Sending Mail to visitor
                     let info = transporter.sendMail({
-                        from: '"Entry Management"<opqrs4203@gmail.com>',                            // sender address
-                        to: checkoutVisitor.email,                                                  // list of receivers
-                        subject: checkoutVisitor.name + " checked out!!",                           // Subject line
-                        html: "<h3>Details</h3><ul><li>Name: "
+                        from: '"Entry Management"<EMS@gmail.com>',                                      // sender address
+                        to: checkoutVisitor.email,                                                      // list of receivers
+                        subject:"Thank you for Visiting!!",                                             // Subject line
+                        html: "<h3> Hello "+ checkoutVisitor.name
+                            +",</h3><br><h3>Your Details</h3><ul><li>Name: "
                             + checkoutVisitor.name +
                             "</li> <li>Phone: " +
                             checkoutVisitor.phone +
