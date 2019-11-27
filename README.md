@@ -62,9 +62,7 @@ You can see this output in Teminal
 ==> Connected to mongoDB
 ```
 ### Folder Structure
-```
-[!Screenshot from 2019-11-28 00-22-26.png]
-```
+![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2000-22-26.png)
 
 
 ## How it Works!!!
