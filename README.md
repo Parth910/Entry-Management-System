@@ -1,1 +1,163 @@
-# Innovaccer-SummerGeeks-Assignment-EMS
+# Innovaccer Summergeeks -  Entry Management Software Assignment
+---------------------------------------
+### Problem Statement
+Given the visitors that we have in office and outside, there is a need to for an entry management software. 
+
+
+### Technology Stack
+##### MERN Stack Application
+This Entry Management Syetem(EMS) uses a number of open source projects to work properly:
+ * **[ReactJS](https://reactjs.org/)** - HTML enhanced for web apps! (FrontEnd/UI)
+* **[Node.js](https://nodejs.org/)** - evented I/O for the backend
+* **[Express](http://expressjs.com/)** - fast node.js network app framework
+* **[MongoDB](https://www.mongodb.com/)** - the streaming build system
+* **[NodeMailer](https://nodemailer.com/about/)** - Mail service
+
+### Installation
+
+EMS requires [Node.js](https://nodejs.org/) v4+ to run.
+EMS requires [NPM(Node Packege Manager)]() for handling node packdge
+EMS requires [MongoDB]() to database handling
+
+1: Clone this Repository
+```sh
+$ git clone
+```
+4: Change diractory
+```sh
+$ cd 
+```
+3: Install the dependencies
+
+```sh
+$ npm install
+```
+
+4: Run build for react build ...
+
+```sh
+$ npm run build
+```
+5: Add you gmail credential in .env file for sending mails by authorised account
+```
+  EMAIL = "YOUREMAIL",
+  PASS = "EMAILPASSWORD"
+```
+6: Go to link given below and allow "Less secure app access" for above account
+ https://www.google.com/settings/security/lesssecureapps
+
+7: Now you are ready for run Application
+```sh
+$ npm start
+```
+You can see this output in Teminal
+```sh
+> client@0.1.0 start /home/tony/assignments/entry_mangement_system
+> node server/app.js 
+
+--------------------------------------
+-------------------
+----------
+==> App is Running at http://localhost:9000
+==> Connected to mongoDB
+```
+### Folder Structure
+```
+
+```
+
+
+## How it Works!!!
+### FrontEnd(UI)
+* Three Pages of UI
+    * Home Page       
+    * Add Host Page
+    * Add Visitor/CheckIn Page
+    * Visitor card Page
+
+#### 1.  Home Page
+ * This Home Page includes three Components
+   * Main Component : It contains two button **CHECK IN** and **ADD HOST**. from checkIn you can checkIn visitor and from addHost you can add new host.
+   * Visitor Dashboard Component : It contains tabular form of visitor list which includes Name, Email, Address and Action coloums. from Action you can view visitor card of visitor with checkout option.
+   * Host Dashboard Component : It contains tabular form of host list which includes Name, Email and Action coloums. from Action you can remove host.
+#### 2. Add Host Page
+ * This contains basic Entry form which has Name, Email and Phone fields.
+ * Host can fill information and be a host !!
+ * By submit it will redirect to Home Page
+#### 3. Add Visitor/CheckIn Page
+ * This contains basic Entry form which has Name, Email, Phone, Select Host and Address person want to visit.
+ * Visitor can fill information and ChecIn !!
+ * By submit it will redirect to Visitorcard Page
+#### 4. Visitor card Page
+ * This contains Visitor Details Card which has Name, Email, Phone, Host and Address.
+ * It also contains two buttons, Home and CheckOut.
+
+### BackEnd(API)
+
+#### Visitor API
+  1. GET : http://localhost:9000/visitor/
+     * API for list of visitors.
+  2. GET : http://localhost:9000/visitor/inVisitor
+     * API for list of visitors whose status is 'In'.
+  3. POST : http://localhost:9000/visitor/addInfo
+     * API for adding Visitor.
+     * it also handle send checkout mail and sms to host.
+  4. GET : http://localhost:9000/visitor/:uniqId.
+     * API for get visitor who has uniqId which is asked in request.
+  5. POST : http://localhost:9000/visitor/:uniqId
+     * API for checkout visitor with paticular uniqId.
+     * it also handle send checkout mail to visitor.
+#### Host API
+  1. GET : http://localhost:9000/host/
+     * API for list of hosts.
+  2. GET : http://localhost:9000/host/:id
+     * API to get host with asking _id.
+  3. POST : http://localhost:9000/host/addHost
+     * API for adding Host.
+  4. DELETE : http://localhost:9000/host/:id
+     * API to delete host with asking _id.
+  
+### Models(Database Schemas)
+#### Visitor Schema
+```
+    name: String,
+    email: String,
+    phone:String,
+    checkInTime:{
+        type:Date
+    },
+    checkOutTime:{
+        type:Date
+    },
+    address:String,
+    status:String,
+    uniqId:String,
+    hostName:{ type: mongoose.Schema.Types.ObjectId, ref: 'host' },         
+    hostEmail:String,
+    hostPhone:String
+```
+#### Host Schema
+```
+    name: String,
+    email: String,
+    phone: String
+```
+
+ 
+
+
+### Deployment
+* I have deployed this application on Amazon Web Services EC2.
+* I have create one instance and deploy this application on that instace.
+* Basically I have used [nginx](https://www.nginx.com/) server and [pm2](https://pm2.keymetrics.io/) for running server on AWS Instance.
+* you can visit it at http://ec2-34-229-241-96.compute-1.amazonaws.com/
+
+### Conatact Details
+* Name: **Parth Patel**
+* Phone: **+91 6354813121**
+* Email: **prp4203@gmail.com**
+* altEmail: **17ucs107@lnmiit.ac.in**
+* website: **Parth910.github.io**
+
+
+
