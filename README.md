@@ -85,7 +85,7 @@ You can see this output in Teminal
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2004-15-41.png)
 #### 3. Add Visitor/CheckIn Page
  * This contains basic Entry form which has Name, Email, Phone, Select Host and Address person want to visit.
- * Visitor can fill information and ChecIn !!
+ * Visitor can fill information and CheckIn !!
  * By submit it will redirect to Visitorcard Page
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-52-07.png)
 #### 4. Visitor card Page
@@ -168,7 +168,7 @@ You can see this output in Teminal
 * Phone: **+91 6354813121**
 * Email: **prp4203@gmail.com**
 * altEmail: **17ucs107@lnmiit.ac.in**
-* website: **Parth910.github.io**(Parth910.github.io)
+* website: **Parth910.github.io**(https://Parth910.github.io)
 
 
 
