@@ -12,12 +12,11 @@ This Entry Management Syetem(EMS) uses a number of open source projects to work 
 * **[Express](http://expressjs.com/)** - fast node.js network app framework
 * **[MongoDB](https://www.mongodb.com/)** - the streaming build system
 * **[NodeMailer](https://nodemailer.com/about/)** - Mail service
+* **[AWS](https://aws.amazon.com/)** - for deployment
 
 ### Installation
 
-EMS requires [Node.js](https://nodejs.org/) v4+ to run.
-EMS requires [NPM(Node Packege Manager)]() for handling node packdge
-EMS requires [MongoDB]() to database handling
+EMS requires [Node.js](https://nodejs.org/) v4+ to run,[NPM(Node Packege Manager)]() for handling node package,[MongoDB]() to database handling.
 
 1: Clone this Repository
 ```sh
@@ -78,17 +77,31 @@ You can see this output in Teminal
    * Main Component : It contains two button **CHECK IN** and **ADD HOST**. from checkIn you can checkIn visitor and from addHost you can add new host.
    * Visitor Dashboard Component : It contains tabular form of visitor list which includes Name, Email, Address and Action coloums. from Action you can view visitor card of visitor with checkout option.
    * Host Dashboard Component : It contains tabular form of host list which includes Name, Email and Action coloums. from Action you can remove host.
+   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2004-14-26.png)
 #### 2. Add Host Page
  * This contains basic Entry form which has Name, Email and Phone fields.
  * Host can fill information and be a host !!
  * By submit it will redirect to Home Page
+  ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2004-15-41.png)
 #### 3. Add Visitor/CheckIn Page
  * This contains basic Entry form which has Name, Email, Phone, Select Host and Address person want to visit.
  * Visitor can fill information and ChecIn !!
  * By submit it will redirect to Visitorcard Page
+  ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-52-07.png)
 #### 4. Visitor card Page
  * This contains Visitor Details Card which has Name, Email, Phone, Host and Address.
  * It also contains two buttons, Home and CheckOut.
+  ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-52-55.png)
+  
+#### After checkIn, Host Got a Mail and SMS stating details of visitor.
+ <img src="https://github.com/Parth910/innovaccer_src/blob/master/WhatsApp%20Image%202019-11-28%20at%205.36.51%20AM.jpeg" width="420" height="790"><img src="https://github.com/Parth910/innovaccer_src/blob/master/WhatsApp%20Image%202019-11-28%20at%204.26.21%20AM.jpeg" width="420" height="790">
+#### After checkIn, Home Page
+  ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-13-13.png)
+  
+  
+#### After checkOut, Visitor Got a Mail stating details of visit.
+  ![Image](https://github.com/Parth910/innovaccer_src/blob/master/WhatsApp%20Image%202019-11-28%20at%205.36.46%20AM.jpeg)
+
 
 ### BackEnd(API)
 
