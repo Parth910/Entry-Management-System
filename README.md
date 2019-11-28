@@ -187,6 +187,6 @@ You can see this output in Teminal
 
 #### JavaScript Styleguide
 
-All JavaScript must adhere to [JavaScript Standard Style](https://standardjs.com/)
+* All JavaScript must adhere to [JavaScript Standard Style](https://standardjs.com/)
 #### Git Issues and Pull request
  * Feel free to submit issues and enhancement requests.
