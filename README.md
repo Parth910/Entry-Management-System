@@ -168,7 +168,7 @@ You can see this output in Teminal
 * Phone: **+91 6354813121**
 * Email: **prp4203@gmail.com**
 * altEmail: **17ucs107@lnmiit.ac.in**
-* website: **Parth910.github.io**(https://Parth910.github.io)
+* website: **[Parth910.github.io](https://Parth910.github.io)**
 
 
 
