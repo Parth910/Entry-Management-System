@@ -66,7 +66,7 @@ You can see this output in Teminal
 
 ## How it Works!!!
 ### FrontEnd(UI)
-* Three Pages of UI
+* UI Structure
     * Home Page       
     * Add Host Page
     * Add Visitor/CheckIn Page
@@ -74,32 +74,32 @@ You can see this output in Teminal
 
 #### 1.  Home Page
  * This Home Page includes three Components
-   * Main Component : It contains two button **CHECK IN** and **ADD HOST**. from checkIn you can checkIn visitor and from addHost you can add new host.
-   * Visitor Dashboard Component : It contains tabular form of visitor list which includes Name, Email, Address and Action coloums. from Action you can view visitor card of visitor with checkout option.
-   * Host Dashboard Component : It contains tabular form of host list which includes Name, Email and Action coloums. from Action you can remove host.
+   * Main Component : It contains two buttons **CHECK IN** and **ADD HOST**. from CheckIn you can CheckIn visitor and from addHost you can add new host.
+   * Visitor Dashboard Component : It contains visitors list in tabular formate which includes Name, Email, Address and Action coloums. from Action you can view visitor card of visitor with checkout option.
+   * Host Dashboard Component : It contains hosts list in tabular formate which includes Name, Email and Action coloums. from Action you can remove host.
    ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2004-14-26.png)
 #### 2. Add Host Page
- * This contains basic Entry form which has Name, Email and Phone fields.
+ * This contains basic entry form which has Name, Email and Phone fields.
  * Host can fill information and be a host !!
- * By submit it will redirect to Home Page
+ * Submit it will redirect to Home Page
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2004-15-41.png)
 #### 3. Add Visitor/CheckIn Page
  * This contains basic Entry form which has Name, Email, Phone, Select Host and Address person want to visit.
  * Visitor can fill information and CheckIn !!
- * By submit it will redirect to Visitorcard Page
+ * Submit it will redirect to Visitorcard Page
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-52-07.png)
 #### 4. Visitor card Page
  * This contains Visitor Details Card which has Name, Email, Phone, Host and Address.
  * It also contains two buttons, Home and CheckOut.
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-52-55.png)
   
-#### After checkIn, Host Got a Mail and SMS stating details of visitor.
+#### After checkIn, Host gets an Email and SMS stating details of visitor.
  <img src="https://github.com/Parth910/innovaccer_src/blob/master/Screenshot_20191128-182431.png" width="420" height="790"><img src="https://github.com/Parth910/innovaccer_src/blob/master/Screenshot_20191128-182452.png" width="420" height="790">
 #### After checkIn, Home Page
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-13-13.png)
   
   
-#### After checkOut, Visitor Got a Mail stating details of visit.
+#### After checkOut, Visitor gets an Email stating details of visit.
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/WhatsApp%20Image%202019-11-28%20at%205.36.46%20AM.jpeg)
 
 
@@ -112,12 +112,12 @@ You can see this output in Teminal
      * API for list of visitors whose status is 'In'.
   3. POST : http://localhost:9000/visitor/addInfo
      * API for adding Visitor.
-     * it also handle send checkout mail and sms to host.
+     * it also handles send checkout mail and sms to host.
   4. GET : http://localhost:9000/visitor/:uniqId.
      * API for get visitor who has uniqId which is asked in request.
   5. POST : http://localhost:9000/visitor/:uniqId
      * API for checkout visitor with paticular uniqId.
-     * it also handle send checkout mail to visitor.
+     * it also handles send checkout mail to visitor.
 #### Host API
   1. GET : http://localhost:9000/host/
      * API for list of hosts.
