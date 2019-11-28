@@ -20,11 +20,11 @@ EMS requires [Node.js](https://nodejs.org/) v4+ to run,[NPM(Node Packege Manager
 
 1: Clone this Repository
 ```sh
-$ git clone
+$ git clone https://github.com/Parth910/Innovaccer-SummerGeeks-Assignment-EMS.git
 ```
 4: Change diractory
 ```sh
-$ cd 
+$ cd Innovaccer-SummerGeeks-Assignment-EMS
 ```
 3: Install the dependencies
 
