@@ -94,7 +94,7 @@ You can see this output in Teminal
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-52-55.png)
   
 #### After checkIn, Host Got a Mail and SMS stating details of visitor.
- <img src="https://github.com/Parth910/innovaccer_src/blob/master/WhatsApp%20Image%202019-11-28%20at%205.36.51%20AM.jpeg" width="420" height="790"><img src="https://github.com/Parth910/innovaccer_src/blob/master/WhatsApp%20Image%202019-11-28%20at%204.26.21%20AM.jpeg" width="420" height="790">
+ <img src="https://github.com/Parth910/innovaccer_src/blob/master/Screenshot_20191128-182431.png" width="420" height="790"><img src="https://github.com/Parth910/innovaccer_src/blob/master/Screenshot_20191128-182452.png" width="420" height="790">
 #### After checkIn, Home Page
   ![Image](https://github.com/Parth910/innovaccer_src/blob/master/Screenshot%20from%202019-11-28%2005-13-13.png)
   
