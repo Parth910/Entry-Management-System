@@ -18,6 +18,7 @@ class createHost extends Component {
             phone: ''
         }
     }
+    //Saving Data from Form
     componentDidMount() {
         this.setState({
             hosts: ['test host'],
@@ -39,7 +40,7 @@ class createHost extends Component {
             phone: e.target.value
         })
     }
-
+    //Handling AddHost
     onSubmit(e) {
         e.preventDefault();
         const host = {
@@ -49,7 +50,7 @@ class createHost extends Component {
 
         }
 
-        
+
 
         axios.post('http://localhost:9000/host/addHost', host)
             .then(res => {
@@ -128,42 +129,11 @@ class createHost extends Component {
                     </MDBRow>
                 </MDBContainer>
             </div>
-            // <form onSubmit={this.onSubmit} >
-            //     <div>
-            //         <label>Name:</label>
-            //         <input type="text"
-            //             required
-            //             value={this.state.name}
-            //             onChange={this.onChangename}
-            //         />
-            //     </div>
-            //     <div>
-            //         <label>Email:</label>
-            //         <input type="text"
-            //             required
-            //             value={this.state.email}
-            //             onChange={this.onChangeemail}
-            //         />
-            //     </div>
 
-            //     <div>
-            //         <label>Phone:</label>
-            //         <input type="text"
-            //             required
-            //             value={this.state.phone}
-            //             onChange={this.onChangephone}
-            //         />
-            //     </div>
-
-            //     <div>
-            //         <input type="submit" />
-            //     </div>
-
-            // </form>
         )
 
     }
 
 }
-
+//export component
 export default createHost;

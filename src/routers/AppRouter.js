@@ -9,11 +9,11 @@ import addHostPage from '../components/createHostPage';
 const AppRouter = () => (
     <BrowserRouter>
         <Switch>
-            <Route path="/" component={homePage} exact={true} />
-            <Route path="/checkInInfo" component={checkInPage} />
-            <Route path="/checkOutPage/:uniqId" component={checkOutPage} />
-            <Route path="/addHost" component={addHostPage} />
-            <Route component={notFoundPage} />
+            <Route path="/" component={homePage} exact={true} />                            {/*Route for home page*/}
+            <Route path="/checkInInfo" component={checkInPage} />                           {/*Route for checkIn page*/}
+            <Route path="/checkOutPage/:uniqId" component={checkOutPage} />                 {/*Route for visitorCard page*/}
+            <Route path="/addHost" component={addHostPage} />                               {/*Route for addHost page*/}
+            <Route component={notFoundPage} />                                              {/*Route for defaul not found page*/}
         </Switch>
     </BrowserRouter>
 );

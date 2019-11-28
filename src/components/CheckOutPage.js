@@ -20,6 +20,7 @@ class checkOutPage extends Component {
     componentDidMount() {
         const { match: { params } } = this.props;
 
+        //Get visitorBy Id
         axios.get(`http://localhost:9000/visitor/${params.uniqId}`)
             .then(res => {
                 this.setState({
@@ -27,9 +28,10 @@ class checkOutPage extends Component {
                 })
             })
             .catch(err => console.log(err))
+        //Get host associated with visitor
         setTimeout(() => axios.get(`http://localhost:9000/host/${this.state.visitor.hostName}`)
             .then(res => {
-               
+
 
                 this.setState({
                     host: res.data
@@ -39,11 +41,11 @@ class checkOutPage extends Component {
 
 
     }
-
+    //Handling checkout for visitors
     onSubmit(e) {
         e.preventDefault();
         const { match: { params } } = this.props;
-       
+
 
         axios.post(`http://localhost:9000/visitor/${params.uniqId}`)
             .then(res => {
@@ -52,7 +54,7 @@ class checkOutPage extends Component {
             .catch(err => console.log(err))
 
 
-        
+
 
     }
 
@@ -126,5 +128,5 @@ class checkOutPage extends Component {
     }
 
 }
-
+//export component
 export default checkOutPage;

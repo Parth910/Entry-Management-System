@@ -8,6 +8,7 @@ import 'mdbreact/dist/css/mdb.css';
 import '../styles/checkInform.css';
 
 class checkInPage extends Component {
+    //defining constructor
     constructor(props) {
         super(props);
 
@@ -20,6 +21,7 @@ class checkInPage extends Component {
         this.onChangeaddress = this.onChangeaddress.bind(this);
         this.onBack = this.onBack.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        //set default state
         this.state = {
             name: '',
             email: '',
@@ -86,6 +88,7 @@ class checkInPage extends Component {
     onBack(e) {
         setTimeout(() => window.location = '/', 10);
     }
+    //handling post request for checkIn visitor
     onSubmit(e) {
         e.preventDefault();
         const visitor = {
@@ -109,8 +112,7 @@ class checkInPage extends Component {
 
 
 
-        // setTimeout(() => window.location = '/checkOutPage/'+uniqId, 1000)
-        // window.location = '/checkOutPage/645312';
+
 
     }
 
@@ -214,67 +216,11 @@ class checkInPage extends Component {
                 </MDBContainer>
             </div>
 
-            // <form onSubmit={this.onSubmit} >
-            //     <div>
-            //         <label>Name:</label>
-            //         <input type="text"
-            //             required
-            //             value={this.state.name}
-            //             onChange={this.onChangename}
-            //         />
-            //     </div>
-            //     <div>
-            //         <label>Email:</label>
-            //         <input type="text"
-            //             required
-            //             value={this.state.email}
-            //             onChange={this.onChangeemail}
-            //         />
-            //     </div>
 
-            //     <div>
-            //         <label>Email:</label>
-            //         <input type="text"
-            //             required
-            //             value={this.state.phone}
-            //             onChange={this.onChangephone}
-            //         />
-            //     </div>
-            //     <div>
-            //         <label>HostName:</label>
-            //         <select required
-            //             value={this.state.hostName}
-            //             onChange={this.onChangehostName}>
-            //             {
-            //                 this.state.hosts.map(function (user) {
-
-            //                     return <option
-            //                         key={user.name}
-            //                         value={user._id}>{user.name}
-            //                     </option>;
-            //                 })
-            //             }
-
-            //         </select>
-
-            //     </div>
-            //     <div>
-            //         <label>address:</label>
-            //         <input type="text"
-            //             required
-            //             value={this.state.address}
-            //             onChange={this.onChangeaddress}
-            //         />
-            //     </div>
-            //     <div>
-            //         <input type="submit" />
-            //     </div>
-
-            // </form>
         )
 
     }
 
 }
-
+//export component
 export default checkInPage;

@@ -7,4 +7,6 @@ const notFoundPage = () => (
         <Link to="/"> <h2 >MainPage</h2></Link>
     </div>
 )
+
+//export component
 export default notFoundPage;

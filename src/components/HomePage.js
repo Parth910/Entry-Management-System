@@ -12,12 +12,14 @@ import '../styles/homePage.css';
 
 
 class homePage extends Component {
+    //defining constructor
     constructor(props) {
         super(props);
 
-
+        //Binding this
         this.onSubmit = this.onSubmit.bind(this);
         this.goToId = this.goToId.bind(this);
+        //set default state
         this.state = {
             visitors: [],
             hosts: []
@@ -26,12 +28,12 @@ class homePage extends Component {
     }
     componentDidMount() {
 
-
+        //get visitors list ans setState
         axios.get('http://localhost:9000/visitor/inVisitor')
             .then(res => {
                 if (res.data.length > 0) {
 
-                    
+
 
 
                     this.setState({
@@ -39,14 +41,15 @@ class homePage extends Component {
 
 
                     })
-                   
+
                 }
             })
+         //get hosts list and setState
         axios.get('http://localhost:9000/host/')
             .then(res => {
                 if (res.data.length > 0) {
 
-                  
+
 
 
                     this.setState({
@@ -54,7 +57,7 @@ class homePage extends Component {
 
 
                     })
-                    
+
 
 
                 }
@@ -63,6 +66,7 @@ class homePage extends Component {
     goToId(e) {
         window.location = "/checkOutPage/" + e.target.value;
     }
+    //On click viewVisitor
     onSubmit(e) {
         console.log(e.target.value);
 
@@ -73,8 +77,9 @@ class homePage extends Component {
             .catch(err => console.log(err))
 
 
-        
+
     }
+    //on remove host
     onSubmitHost(e) {
         console.log(e.target.value);
 
@@ -85,7 +90,7 @@ class homePage extends Component {
             .catch(err => console.log(err))
 
 
-      
+
 
     }
     render() {
@@ -181,7 +186,7 @@ class homePage extends Component {
                                             </tbody>
                                         </table>
 
-                                       
+
                                     </Fragment>
                                 </MDBCardBody>
                             </MDBCard>
@@ -255,5 +260,5 @@ class homePage extends Component {
     }
 }
 
-
+//export component
 export default homePage;
