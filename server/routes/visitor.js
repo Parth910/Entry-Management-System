@@ -93,13 +93,15 @@ router.route("/addInfo").post((req, res) => {
                     });
 
 
-                    //Send Mobile SMS to Hodt through bulkmessageservice API
-                    request('http://sms.bulksmsserviceproviders.com/api/send_http.php?authkey=3a4ae3b1438a3e09ef56b4578c833b55&mobiles=' + host.phone + '&message=' + 'Name:' + name + '%0D%0A' + 'Phone:' + phone + '%0D%0A' + '%0D%0A' + 'checkInTime:' + moment(checkInTime).format('MMMM Do YYYY, h:mm:ss a') + '%0D%0A' + 'Address:' + address + '&sender=BulkIN&route=B', (error, response, body) => {
+                    //Send Mobile SMS to Hodt through way2sms API
+                    request('http://www.way2sms.com/api/v1/sendCampaign?apiKey=XM274RO5RZPM8A1DGO736VVCVDW5U8Q1&secret=ZESXYXSED7T84QD8&usetype=stage&senderid=EMS&phone=' + host.phone + '&message=' + 'Name: ' + name + '%0A' + 'Phone: ' + phone + '%0A' + 'Email: ' + email + '%0A' + 'checkInTime: ' + moment(checkInTime).format('MMMM Do YYYY, h:mm:ss a') + '%0A' + 'Address: ' + address, (error, response, body) => {
                         if (!error && response.statusCode == 200) {
 
                             console.log(body);
                         }
                     })
+
+
 
 
                     res.send(uniqId);
@@ -144,9 +146,9 @@ router.route('/:uniqid').post((req, res) => {
                     let info = transporter.sendMail({
                         from: '"Entry Management"<EMS@gmail.com>',                                      // sender address
                         to: checkoutVisitor.email,                                                      // list of receivers
-                        subject:"Thank you for Visiting!!",                                             // Subject line
-                        html: "<h3> Hello "+ checkoutVisitor.name
-                            +",</h3><br><h3>Your Details</h3><ul><li>Name: "
+                        subject: "Thank you for Visiting!!",                                             // Subject line
+                        html: "<h3> Hello " + checkoutVisitor.name
+                            + ",</h3><br><h3>Your Details</h3><ul><li>Name: "
                             + checkoutVisitor.name +
                             "</li> <li>Phone: " +
                             checkoutVisitor.phone +
