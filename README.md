@@ -175,7 +175,7 @@ You can see this output in Teminal
 
 
 ### Development Setup
-* To contribute in this you have this application locally.so first install from here.
+* To contribute in this you have this application locally.so first install from [here](https://github.com/Parth910/Innovaccer-SummerGeeks-Assignment-EMS/blob/master/README.md#installation).
 ### Styleguides
 
 #### Git Commit Messages
@@ -188,3 +188,5 @@ You can see this output in Teminal
 #### JavaScript Styleguide
 
 All JavaScript must adhere to [JavaScript Standard Style](https://standardjs.com/)
+#### Git Issues and Pull request
+ *Feel free to submit issues and enhancement requests.
