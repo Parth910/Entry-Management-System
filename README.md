@@ -170,5 +170,21 @@ You can see this output in Teminal
 * altEmail: **17ucs107@lnmiit.ac.in**
 * website: **[Parth910.github.io](https://Parth910.github.io)**
 
+## Want to Contribute!!
+  :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
 
+### Development Setup
+* To contribute in this you have this application locally.so first install from here.
+### Styleguides
+
+#### Git Commit Messages
+
+* Use the present tense ("Add feature" not "Added feature")
+* Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
+* Limit the first line to 72 characters or less
+* Reference issues and pull requests liberally after the first line
+
+#### JavaScript Styleguide
+
+All JavaScript must adhere to [JavaScript Standard Style](https://standardjs.com/)
