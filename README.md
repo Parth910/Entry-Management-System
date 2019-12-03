@@ -12,13 +12,17 @@ This Entry Management Syetem(EMS) uses a number of open source projects to work 
 * **[Express](http://expressjs.com/)** - fast node.js network app framework
 * **[MongoDB](https://www.mongodb.com/)** - database 
 * **[AWS](https://aws.amazon.com/)** - for deployment
-* **[NodeMailer](https://nodemailer.com/about/)** - Mail service
-* **[WAY2SMS API](https://www.way2sms.com/)** - SMS service
+* **[NGINX](https://www.nginx.com/)** - web-server in AWS
+* **[NodeMailer](https://nodemailer.com/about/)** - mail service
+* **[WAY2SMS API](https://www.way2sms.com/)** - sms service
 
+<blockquote>
+<h4>Note:</h4><p>All other dependencies and dev-dependencies are mentioned in packege.JSON. </p>
+</blockquote>
 
 ### Installation
 
-EMS requires [Node.js](https://nodejs.org/) v4+ to run,[NPM(Node Packege Manager)]() for handling node package,[MongoDB]() to database handling.
+EMS requires [Node.js](https://nodejs.org/) v4+ to run, [NPM(Node Packege Manager)]() for handling node package, [MongoDB]() to database handling.
 
 1: Clone this Repository
 ```sh
@@ -27,6 +31,11 @@ $ git clone https://github.com/Parth910/Innovaccer-SummerGeeks-Assignment-EMS.gi
 2: Change diractory
 ```sh
 $ cd Innovaccer-SummerGeeks-Assignment-EMS
+```
+3: Start MongoDB server after installing MongoDB
+
+```sh
+$ sudo service mongod start
 ```
 3: Install the dependencies
 
@@ -164,6 +173,9 @@ You can see this output in Teminal
 * I have create one instance and deploy this application on that instace.
 * Basically I have used [nginx](https://www.nginx.com/) server and [pm2](https://pm2.keymetrics.io/) for running server on AWS Instance.
 * you can visit it at http://ec2-34-229-241-96.compute-1.amazonaws.com/
+<blockquote>
+<h4>Note:</h4><p>All required features (Mail and Sms) are working in this deployment. </p>
+</blockquote>
 
 ### Conatact Details
 * Name: **Parth Patel**
