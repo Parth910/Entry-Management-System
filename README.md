@@ -174,7 +174,8 @@ You can see this output in Teminal
 * Basically I have used [nginx](https://www.nginx.com/) server and [pm2](https://pm2.keymetrics.io/) for running server on AWS Instance.
 * you can visit it at http://ec2-34-229-241-96.compute-1.amazonaws.com/
 <blockquote>
-<h4>Note:</h4><p>All required features (Mail and Sms) are working in this deployment. </p>
+<h4>Note:</h4><p>All required features (Mail and Sms) are working in this deployment. 
+  PS : with valid Email and Mobile Number </p>
 </blockquote>
 
 ### Conatact Details
