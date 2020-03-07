@@ -26,11 +26,11 @@ EMS requires [Node.js](https://nodejs.org/) v4+ to run, [NPM(Node Packege Manage
 
 1: Clone this Repository
 ```sh
-$ git clone https://github.com/Parth910/Innovaccer-SummerGeeks-Assignment-EMS.git
+$ git clone https://github.com/Parth910/Entry-Management-System.git
 ```
 2: Change diractory
 ```sh
-$ cd Innovaccer-SummerGeeks-Assignment-EMS
+$ cd Entry-Management-System
 ```
 3: Start MongoDB server after installing MongoDB
 
